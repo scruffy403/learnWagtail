@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/rocketman.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}">
 
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -27,10 +27,14 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {%block banner %}{% endblock %}
+
+        <main id="content" class="container my-4" role="main">
         {% block content %}{% endblock %}
+          </main>
 
         {# Global javascript #}
-        <script type="text/javascript" src="{% static 'js/rocketman.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
 
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
