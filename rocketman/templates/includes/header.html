@@ -1,0 +1,21 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light">
+  <div class="container">
+    <a href="/" class="navbar-brand">
+      <img src="{% static 'images/logo.png' %}" alt="Rocketman">
+    </a>
+
+    <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarMenu">
+    <ul class="navbar-nav ml-auto">
+      {% for i in "123" %}
+        <li class="nav-item active"><a href="@todo" class="nav-link">
+          Link {{ i }}
+        </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
